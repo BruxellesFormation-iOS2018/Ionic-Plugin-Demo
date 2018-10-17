@@ -20,8 +20,10 @@
       <ion-list>
           <ion-item *ngFor="let weatherInfo of weatherData.list" >
             
+              <img src='http://openweathermap.org/img/w/{{weatherInfo.weather[0].icon}}.png'/>
+              
             <h3>
-                <img src='http://openweathermap.org/img/w/{{weatherInfo.weather[0].icon}}.png'/>
+                
               {{weatherInfo.main.temp}} °C 
               <small>{{formatedDate(weatherInfo.dt_txt)}}</small>
             </h3>  
