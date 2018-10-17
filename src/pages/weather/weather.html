@@ -1,0 +1,35 @@
+<!--
+  Generated template for the WeatherPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>weather</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <div *ngIf="weatherData">
+      <h3>Forecast in {{weatherData.city.name}}</h3>
+
+      <ion-list>
+          <ion-item *ngFor="let weatherInfo of weatherData.list" >
+            
+            <h3>
+                <img src='http://openweathermap.org/img/w/{{weatherInfo.weather[0].icon}}.png'/>
+              {{weatherInfo.main.temp}} °C 
+              <small>{{formatedDate(weatherInfo.dt_txt)}}</small>
+            </h3>  
+          </ion-item>
+      </ion-list>
+
+
+  </div>
+  
+
+</ion-content>
