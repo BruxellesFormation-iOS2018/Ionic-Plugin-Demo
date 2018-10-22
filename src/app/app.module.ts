@@ -14,6 +14,9 @@ import { WeatherPage } from '../pages/weather/weather';
 import { WeatherPageModule } from '../pages/weather/weather.module';
 import { OpenWeatherProvider } from '../providers/open-weather/open-weather';
 import { HttpClientModule } from '@angular/common/http';
+import { SocialSharing } from '@ionic-native/social-sharing';
+import { SafariViewController } from '@ionic-native/safari-view-controller';
+import { File } from '@ionic-native/file';
 
 @NgModule({
   declarations: [
@@ -42,7 +45,10 @@ import { HttpClientModule } from '@angular/common/http';
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    OpenWeatherProvider
+    OpenWeatherProvider,
+    SocialSharing,
+    SafariViewController,
+    File
   ]
 })
 export class AppModule {}

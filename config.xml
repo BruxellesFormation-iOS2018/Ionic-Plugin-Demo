@@ -88,5 +88,8 @@
     <edit-config file="*-Info.plist" mode="merge" target="NSLocationWhenInUseUsageDescription">
         <string>Display weather around your location</string>
     </edit-config>
+    <plugin name="cordova-plugin-x-socialsharing" spec="5.4.1" />
+    <plugin name="cordova-plugin-safariviewcontroller" spec="1.5.4" />
+    <plugin name="cordova-plugin-file" spec="6.0.1" />
     <engine name="ios" spec="4.5.5" />
 </widget>
